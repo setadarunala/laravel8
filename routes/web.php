@@ -14,5 +14,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
+
+Route::get('/siswa/{nama_siswa?}', function ($nama_siswa) {
+    return view('siswa',['nama_siswa'=>$nama_siswa]);
+});
+Route::view('/about','about',[
+    'nama'=>'RONI',
+    'alamat'=>'Aceh'
+]);
+
